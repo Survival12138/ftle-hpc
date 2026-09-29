@@ -1,0 +1,127 @@
+{
+  "configuration": {
+    "devices": [
+      0,
+      1
+    ],
+    "mode": "mixed",
+    "decomposition": "contiguous_y_rows",
+    "communication": "CUDA_IPC_mapped_P2P",
+    "halo_width_rows": 1,
+    "nx": 241,
+    "ny": 121,
+    "particles": 29161,
+    "steps": 10,
+    "dt": 0.01,
+    "tau": 0.1,
+    "threads": 64,
+    "chunk_steps": 10,
+    "warmup_runs": 1,
+    "repeats": 2
+  },
+  "distributed_performance": {
+    "compute_wall_seconds_median": 0.0006807299796491861,
+    "particle_steps_per_second": 428378371.3334927
+  },
+  "rank_results": [
+    {
+      "rank": 0,
+      "device_id": 0,
+      "row_range": [
+        0,
+        61
+      ],
+      "particles": 14701,
+      "resources": {
+        "actual_registers_per_thread": 72,
+        "local_memory_bytes_per_thread": 0
+      },
+      "coefficient_setup": {
+        "coefficient_entries": 30,
+        "coefficient_bytes": 480,
+        "host_stage_time_build_seconds": 3.229500725865364e-05,
+        "device_coefficient_setup_seconds": 0.0005823420360684395,
+        "total_coefficient_setup_seconds": 0.0006168140098452568
+      },
+      "performance": {
+        "integration_seconds_median": 0.00018918400257825853,
+        "halo_exchange_seconds_median": 3.8512000814080235e-05,
+        "flowmap_ftle_seconds_median": 0.00012134400382637976,
+        "compute_wall_seconds_median": 0.0006807299796491861,
+        "halo_bytes_received": 3856
+      },
+      "run_metrics": [
+        {
+          "integration_seconds": 0.00021420800685882567,
+          "halo_exchange_seconds": 4.710400104522705e-05,
+          "flowmap_ftle_seconds": 0.00012595200538635253,
+          "compute_wall_seconds": 0.0007623238489031792,
+          "halo_bytes_received": 3856
+        },
+        {
+          "integration_seconds": 0.00016415999829769135,
+          "halo_exchange_seconds": 2.9920000582933426e-05,
+          "flowmap_ftle_seconds": 0.00011673600226640701,
+          "compute_wall_seconds": 0.0005991361103951931,
+          "halo_bytes_received": 3856
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "device_id": 1,
+      "row_range": [
+        61,
+        121
+      ],
+      "particles": 14460,
+      "resources": {
+        "actual_registers_per_thread": 72,
+        "local_memory_bytes_per_thread": 0
+      },
+      "coefficient_setup": {
+        "coefficient_entries": 30,
+        "coefficient_bytes": 480,
+        "host_stage_time_build_seconds": 2.9677990823984146e-05,
+        "device_coefficient_setup_seconds": 0.0005589616484940052,
+        "total_coefficient_setup_seconds": 0.0005908748134970665
+      },
+      "performance": {
+        "integration_seconds_median": 0.00018969599902629851,
+        "halo_exchange_seconds_median": 3.758400026708841e-05,
+        "flowmap_ftle_seconds_median": 0.00012134400010108947,
+        "compute_wall_seconds_median": 0.0006631335709244013,
+        "halo_bytes_received": 3856
+      },
+      "run_metrics": [
+        {
+          "integration_seconds": 0.0002186879962682724,
+          "halo_exchange_seconds": 4.5056000351905825e-05,
+          "flowmap_ftle_seconds": 0.00012697599828243256,
+          "compute_wall_seconds": 0.0007426319643855095,
+          "halo_bytes_received": 3856
+        },
+        {
+          "integration_seconds": 0.00016070400178432465,
+          "halo_exchange_seconds": 3.0112000182271003e-05,
+          "flowmap_ftle_seconds": 0.0001157120019197464,
+          "compute_wall_seconds": 0.0005836351774632931,
+          "halo_bytes_received": 3856
+        }
+      ]
+    }
+  ],
+  "correctness": {
+    "distributed_vs_global_flowmap": {
+      "max_absolute_error": 2.2195786875123247e-15,
+      "mean_absolute_error": 3.203669183555243e-16,
+      "relative_l2_error": 1.3496373081144144e-15
+    },
+    "distributed_passed": true,
+    "flowmap_vs_direct_F_discretization": {
+      "max_absolute_error": 0.006140582798874472,
+      "mean_absolute_error": 4.9076782195087905e-05,
+      "relative_l2_error": 0.00016230270552577454
+    }
+  }
+}

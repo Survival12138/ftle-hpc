@@ -1,0 +1,38 @@
+{
+  "configuration": {
+    "nx": 241,
+    "ny": 121,
+    "particles": 29161,
+    "steps": 10,
+    "dt": 0.01,
+    "tau": 0.1,
+    "dtype": "float64",
+    "threads": 256,
+    "warmup_runs": 1,
+    "repeats": 1,
+    "error_reference": "gpu_chunk1"
+  },
+  "results": [
+    {
+      "chunk_steps": 1,
+      "rk4_kernel_launches": 10,
+      "gpu_kernel_seconds_median": 0.0015367360115051268,
+      "gpu_end_to_end_seconds_median": 0.0033786570420488715,
+      "gpu_h2d_seconds_median": 0.0015342789702117443,
+      "gpu_d2h_seconds_median": 0.00015756301581859589,
+      "gpu_kernel_particle_steps_per_second": 189759332.6484151,
+      "gpu_finite": true,
+      "gpu_max_boundary_error": 0.0,
+      "gpu_mean_abs_detF_minus_1": 5.606113133622902e-12,
+      "gpu_max_abs_detF_minus_1": 2.6555535548311582e-11,
+      "max_abs_ftle_error": 0.0,
+      "mean_abs_ftle_error": 0.0,
+      "relative_l2_ftle_error": 0.0,
+      "kernel_speedup_vs_chunk1": 1.0,
+      "end_to_end_speedup_vs_chunk1": 1.0
+    }
+  ],
+  "best_chunk_steps": 1,
+  "best_kernel_seconds": 0.0015367360115051268,
+  "best_kernel_speedup_vs_chunk1": 1.0
+}

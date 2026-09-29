@@ -1,0 +1,60 @@
+{
+  "configuration": {
+    "nx": 2001,
+    "ny": 1001,
+    "particles": 2003001,
+    "steps": 1000,
+    "dt": 0.01,
+    "tau": 10.0,
+    "dtype": "float64",
+    "threads": 64,
+    "chunk_steps": 50,
+    "warmup_runs": 1,
+    "repeats": 5,
+    "error_reference": "strict_gpu",
+    "relative_l2_error_tolerance": 1e-08
+  },
+  "results": [
+    {
+      "mode": "strict",
+      "rk4_kernel_launches": 20,
+      "gpu_integration_seconds_median": 0.23034681701660156,
+      "gpu_ftle_seconds_median": 7.475200295448303e-05,
+      "gpu_all_kernel_seconds_median": 0.2304225930199027,
+      "gpu_end_to_end_seconds_median": 0.2445731620537117,
+      "gpu_h2d_seconds_median": 0.011698860907927155,
+      "gpu_d2h_seconds_median": 0.0010747070191428065,
+      "gpu_particle_steps_per_second": 8695587922.344244,
+      "gpu_finite": true,
+      "gpu_max_boundary_error": 0.0,
+      "gpu_mean_abs_detF_minus_1": 7.587194432485367e-11,
+      "gpu_max_abs_detF_minus_1": 3.6834535421803594e-10,
+      "max_abs_ftle_error": 0.0,
+      "mean_abs_ftle_error": 0.0,
+      "relative_l2_ftle_error": 0.0
+    },
+    {
+      "mode": "fastmath",
+      "rk4_kernel_launches": 20,
+      "gpu_integration_seconds_median": 0.2317039031982422,
+      "gpu_ftle_seconds_median": 7.475200295448303e-05,
+      "gpu_all_kernel_seconds_median": 0.23177865520119667,
+      "gpu_end_to_end_seconds_median": 0.24454634601715952,
+      "gpu_h2d_seconds_median": 0.011882962076924741,
+      "gpu_d2h_seconds_median": 0.0012004210148006678,
+      "gpu_particle_steps_per_second": 8644657998.213625,
+      "gpu_finite": true,
+      "gpu_max_boundary_error": 0.0,
+      "gpu_mean_abs_detF_minus_1": 7.587194432485367e-11,
+      "gpu_max_abs_detF_minus_1": 3.6834535421803594e-10,
+      "max_abs_ftle_error": 0.0,
+      "mean_abs_ftle_error": 0.0,
+      "relative_l2_ftle_error": 0.0,
+      "integration_speedup_vs_strict": 0.9941430154481277,
+      "all_kernel_speedup_vs_strict": 0.9941493224209242,
+      "end_to_end_speedup_vs_strict": 1.0001096562553027
+    }
+  ],
+  "fastmath_passed": true,
+  "fastmath_integration_speedup": 0.9941430154481277
+}

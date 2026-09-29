@@ -1,0 +1,127 @@
+{
+  "configuration": {
+    "devices": [
+      0,
+      1
+    ],
+    "mode": "mixed",
+    "decomposition": "contiguous_y_rows",
+    "halo_width_rows": 1,
+    "communication": "cudaMemcpyPeerAsync",
+    "nx": 241,
+    "ny": 121,
+    "particles": 29161,
+    "steps": 10,
+    "dt": 0.01,
+    "tau": 0.1,
+    "threads": 64,
+    "chunk_steps": 10,
+    "warmup_runs": 1,
+    "repeats": 2
+  },
+  "distributed_performance": {
+    "compute_wall_seconds_median": 0.0017088253516703844,
+    "particle_steps_per_second": 170649387.72996897
+  },
+  "rank_results": [
+    {
+      "rank": 0,
+      "device_id": 0,
+      "row_range": [
+        0,
+        61
+      ],
+      "particles": 14701,
+      "resources": {
+        "actual_registers_per_thread": 72,
+        "local_memory_bytes_per_thread": 0
+      },
+      "coefficient_setup": {
+        "coefficient_entries": 30,
+        "coefficient_bytes": 480,
+        "host_stage_time_build_seconds": 3.70219349861145e-05,
+        "device_coefficient_setup_seconds": 0.0015294956974685192,
+        "total_coefficient_setup_seconds": 0.001570092048496008
+      },
+      "performance": {
+        "integration_seconds_median": 0.00038592000305652616,
+        "halo_exchange_seconds_median": 6.50239996612072e-05,
+        "flowmap_ftle_seconds_median": 0.0003153920024633408,
+        "compute_wall_seconds_median": 0.0017088253516703844,
+        "halo_bytes_received": 3856
+      },
+      "run_metrics": [
+        {
+          "integration_seconds": 0.00040188801288604736,
+          "halo_exchange_seconds": 6.758400052785873e-05,
+          "flowmap_ftle_seconds": 0.0003246079981327057,
+          "compute_wall_seconds": 0.0018312158063054085,
+          "halo_bytes_received": 3856
+        },
+        {
+          "integration_seconds": 0.000369951993227005,
+          "halo_exchange_seconds": 6.246399879455566e-05,
+          "flowmap_ftle_seconds": 0.0003061760067939758,
+          "compute_wall_seconds": 0.0015864348970353603,
+          "halo_bytes_received": 3856
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "device_id": 1,
+      "row_range": [
+        61,
+        121
+      ],
+      "particles": 14460,
+      "resources": {
+        "actual_registers_per_thread": 72,
+        "local_memory_bytes_per_thread": 0
+      },
+      "coefficient_setup": {
+        "coefficient_entries": 30,
+        "coefficient_bytes": 480,
+        "host_stage_time_build_seconds": 2.1770130842924118e-05,
+        "device_coefficient_setup_seconds": 0.00042366189882159233,
+        "total_coefficient_setup_seconds": 0.00044781481847167015
+      },
+      "performance": {
+        "integration_seconds_median": 0.00023873599618673324,
+        "halo_exchange_seconds_median": 0.00010700799897313119,
+        "flowmap_ftle_seconds_median": 0.00018175999820232392,
+        "compute_wall_seconds_median": 0.0014817933551967144,
+        "halo_bytes_received": 3856
+      },
+      "run_metrics": [
+        {
+          "integration_seconds": 0.0002633279860019684,
+          "halo_exchange_seconds": 0.00013516800105571746,
+          "flowmap_ftle_seconds": 0.000187391996383667,
+          "compute_wall_seconds": 0.0016087568365037441,
+          "halo_bytes_received": 3856
+        },
+        {
+          "integration_seconds": 0.0002141440063714981,
+          "halo_exchange_seconds": 7.88479968905449e-05,
+          "flowmap_ftle_seconds": 0.00017612800002098083,
+          "compute_wall_seconds": 0.0013548298738896847,
+          "halo_bytes_received": 3856
+        }
+      ]
+    }
+  ],
+  "correctness": {
+    "distributed_vs_global_flowmap": {
+      "max_absolute_error": 2.2195786875123247e-15,
+      "mean_absolute_error": 3.203669183555243e-16,
+      "relative_l2_error": 1.3496373081144144e-15
+    },
+    "distributed_passed": true,
+    "flowmap_vs_direct_F_discretization": {
+      "max_absolute_error": 0.006140582798874472,
+      "mean_absolute_error": 4.9076782195087905e-05,
+      "relative_l2_error": 0.00016230270552577454
+    }
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "configuration": {
+    "mode": "mixed",
+    "devices": [
+      0,
+      1
+    ],
+    "gpu_count": 2,
+    "decomposition": "contiguous_y_rows",
+    "row_ranges": [
+      [
+        0,
+        501
+      ],
+      [
+        501,
+        1001
+      ]
+    ],
+    "nx": 2001,
+    "ny": 1001,
+    "particles": 2003001,
+    "steps": 1000,
+    "dt": 0.01,
+    "tau": 10.0,
+    "state_dtype": "float64",
+    "trig_dtype": "float32",
+    "threads": 64,
+    "chunk_steps": 50,
+    "warmup_runs": 2,
+    "repeats": 7,
+    "relative_l2_error_tolerance": 1e-05,
+    "max_absolute_error_tolerance": 0.0001,
+    "max_abs_detF_minus_1_tolerance": 1e-07,
+    "cuda_visible_devices": null
+  },
+  "distributed_performance": {
+    "compute_wall_seconds_median": 0.05602566618472338,
+    "particle_steps_per_second": 35751489208.461426,
+    "per_repeat_wall_seconds": [
+      0.06838182033970952,
+      0.05614603077992797,
+      0.05438300594687462,
+      0.05602566618472338,
+      0.055938081350177526,
+      0.05440484220162034,
+      0.056269763968884945
+    ],
+    "slowest_rank_integration_seconds_median": 0.04653369522094727,
+    "slowest_rank_end_to_end_seconds_median": 0.054302174132317305
+  },
+  "rank_results": [
+    {
+      "rank": 0,
+      "device_id": 0,
+      "device_name": "NVIDIA A800-SXM4-40GB",
+      "row_start": 0,
+      "row_stop": 501,
+      "rows": 501,
+      "particles": 1002501,
+      "compiled_resources": {
+        "actual_registers_per_thread": 72,
+        "local_memory_bytes_per_thread": 0
+      },
+      "coefficient_setup": {
+        "coefficient_entries": 3000,
+        "coefficient_bytes": 48000,
+        "host_stage_time_build_seconds": 0.0008293422870337963,
+        "device_coefficient_setup_seconds": 0.0006344649009406567,
+        "total_coefficient_setup_seconds": 0.0014666472561657429
+      },
+      "performance": {
+        "rk4_kernel_launches": 20,
+        "integration_seconds_median": 0.04653369522094727,
+        "ftle_seconds_median": 3.993599861860275e-05,
+        "all_kernel_seconds_median": 0.04657363121956587,
+        "h2d_seconds_median": 0.006038955878466368,
+        "d2h_seconds_median": 0.0005938271060585976,
+        "end_to_end_seconds_median": 0.05334472795948386,
+        "particle_steps_per_second": 21543550221.834126
+      },
+      "run_metrics": [
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.04853308868408203,
+          "ftle_seconds": 3.993599861860275e-05,
+          "all_kernel_seconds": 0.04857302468270063,
+          "h2d_seconds": 0.006572267040610313,
+          "d2h_seconds": 0.0005914550274610519,
+          "end_to_end_seconds": 0.05581326177343726,
+          "particle_steps_per_second": 20656031321.75682
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.04666944122314453,
+          "ftle_seconds": 3.993599861860275e-05,
+          "all_kernel_seconds": 0.04670937722176313,
+          "h2d_seconds": 0.006004625931382179,
+          "d2h_seconds": 0.0005904422141611576,
+          "end_to_end_seconds": 0.05337819689884782,
+          "particle_steps_per_second": 21480887144.25908
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.046544960021972656,
+          "ftle_seconds": 3.891199827194214e-05,
+          "all_kernel_seconds": 0.046583872020244596,
+          "h2d_seconds": 0.005804834887385368,
+          "d2h_seconds": 0.0006172941066324711,
+          "end_to_end_seconds": 0.05307334288954735,
+          "particle_steps_per_second": 21538336256.530148
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.046529022216796875,
+          "ftle_seconds": 4.095999896526337e-05,
+          "all_kernel_seconds": 0.04656998221576214,
+          "h2d_seconds": 0.006114251911640167,
+          "d2h_seconds": 0.0005938271060585976,
+          "end_to_end_seconds": 0.05334472795948386,
+          "particle_steps_per_second": 21545713884.314106
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.04653369522094727,
+          "ftle_seconds": 3.993599861860275e-05,
+          "all_kernel_seconds": 0.04657363121956587,
+          "h2d_seconds": 0.006010890007019043,
+          "d2h_seconds": 0.0005958639085292816,
+          "end_to_end_seconds": 0.0532480888068676,
+          "particle_steps_per_second": 21543550221.834126
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.046529281616210935,
+          "ftle_seconds": 3.993599861860275e-05,
+          "all_kernel_seconds": 0.04656921761482954,
+          "h2d_seconds": 0.006038955878466368,
+          "d2h_seconds": 0.000612006988376379,
+          "end_to_end_seconds": 0.05328720575198531,
+          "particle_steps_per_second": 21545593767.57551
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.0465288314819336,
+          "ftle_seconds": 3.993599861860275e-05,
+          "all_kernel_seconds": 0.0465687674805522,
+          "h2d_seconds": 0.006372585892677307,
+          "d2h_seconds": 0.0005920706316828728,
+          "end_to_end_seconds": 0.053597773890942335,
+          "particle_steps_per_second": 21545802206.299877
+        }
+      ],
+      "materialization_run": {
+        "rk4_kernel_launches": 20,
+        "integration_seconds": 0.04652454376220703,
+        "ftle_seconds": 3.891199827194214e-05,
+        "all_kernel_seconds": 0.04656345576047897,
+        "h2d_seconds": 0.006616605911403894,
+        "d2h_seconds": 0.0005940152332186699,
+        "end_to_end_seconds": 0.0538448179140687,
+        "particle_steps_per_second": 21547787875.6622
+      },
+      "ftle_statistics": {
+        "finite": true,
+        "minimum": 9.746878339314175e-05,
+        "maximum": 0.9991105286745109,
+        "mean": 0.17775840099753784
+      },
+      "invariants": {
+        "finite": true,
+        "max_boundary_error": 0.0,
+        "mean_abs_detF_minus_1": 8.119069587096655e-11,
+        "max_abs_detF_minus_1": 3.4016522931779036e-10
+      }
+    },
+    {
+      "rank": 1,
+      "device_id": 1,
+      "device_name": "NVIDIA A800-SXM4-40GB",
+      "row_start": 501,
+      "row_stop": 1001,
+      "rows": 500,
+      "particles": 1000500,
+      "compiled_resources": {
+        "actual_registers_per_thread": 72,
+        "local_memory_bytes_per_thread": 0
+      },
+      "coefficient_setup": {
+        "coefficient_entries": 3000,
+        "coefficient_bytes": 48000,
+        "host_stage_time_build_seconds": 0.0008215587586164474,
+        "device_coefficient_setup_seconds": 0.0007039946503937244,
+        "total_coefficient_setup_seconds": 0.0015280339866876602
+      },
+      "performance": {
+        "rk4_kernel_launches": 20,
+        "integration_seconds_median": 0.046521472930908206,
+        "ftle_seconds_median": 3.891199827194214e-05,
+        "all_kernel_seconds_median": 0.046560384929180146,
+        "h2d_seconds_median": 0.006779845803976059,
+        "d2h_seconds_median": 0.0009774081408977509,
+        "end_to_end_seconds_median": 0.054302174132317305,
+        "particle_steps_per_second": 21506197825.8062
+      },
+      "run_metrics": [
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.05880131149291992,
+          "ftle_seconds": 3.891199827194214e-05,
+          "all_kernel_seconds": 0.05884022349119186,
+          "h2d_seconds": 0.006995840929448605,
+          "d2h_seconds": 0.0009774081408977509,
+          "end_to_end_seconds": 0.06689495965838432,
+          "particle_steps_per_second": 17014926616.398123
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.04654419326782227,
+          "ftle_seconds": 3.993599861860275e-05,
+          "all_kernel_seconds": 0.04658412926644087,
+          "h2d_seconds": 0.006874942220747471,
+          "d2h_seconds": 0.0009698220528662205,
+          "end_to_end_seconds": 0.05449781380593777,
+          "particle_steps_per_second": 21495699672.845825
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.046554431915283204,
+          "ftle_seconds": 3.891199827194214e-05,
+          "all_kernel_seconds": 0.046593343913555144,
+          "h2d_seconds": 0.006596844177693129,
+          "d2h_seconds": 0.0009840261191129684,
+          "end_to_end_seconds": 0.05424313899129629,
+          "particle_steps_per_second": 21490972155.36098
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.04649065780639648,
+          "ftle_seconds": 3.993599861860275e-05,
+          "all_kernel_seconds": 0.046530593805015084,
+          "h2d_seconds": 0.006551804021000862,
+          "d2h_seconds": 0.000959266908466816,
+          "end_to_end_seconds": 0.054109462071210146,
+          "particle_steps_per_second": 21520452650.217068
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.04648998260498047,
+          "ftle_seconds": 3.891199827194214e-05,
+          "all_kernel_seconds": 0.04652889460325241,
+          "h2d_seconds": 0.006779845803976059,
+          "d2h_seconds": 0.0009795860387384892,
+          "end_to_end_seconds": 0.05435647862032056,
+          "particle_steps_per_second": 21520765204.43388
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.04632160186767578,
+          "ftle_seconds": 3.891199827194214e-05,
+          "all_kernel_seconds": 0.04636051386594772,
+          "h2d_seconds": 0.006824946962296963,
+          "d2h_seconds": 0.000988572370260954,
+          "end_to_end_seconds": 0.05424371687695384,
+          "particle_steps_per_second": 21598993982.50669
+        },
+        {
+          "rk4_kernel_launches": 20,
+          "integration_seconds": 0.046521472930908206,
+          "ftle_seconds": 3.891199827194214e-05,
+          "all_kernel_seconds": 0.046560384929180146,
+          "h2d_seconds": 0.006697057746350765,
+          "d2h_seconds": 0.0009748921729624271,
+          "end_to_end_seconds": 0.054302174132317305,
+          "particle_steps_per_second": 21506197825.8062
+        }
+      ],
+      "materialization_run": {
+        "rk4_kernel_launches": 20,
+        "integration_seconds": 0.046488449096679686,
+        "ftle_seconds": 3.891199827194214e-05,
+        "all_kernel_seconds": 0.046527361094951626,
+        "h2d_seconds": 0.007773844059556723,
+        "d2h_seconds": 0.0009681391529738903,
+        "end_to_end_seconds": 0.055336079094558954,
+        "particle_steps_per_second": 21521475107.059616
+      },
+      "ftle_statistics": {
+        "finite": true,
+        "minimum": 0.00010104899432209467,
+        "maximum": 1.0044445075872699,
+        "mean": 0.18200523809128177
+      },
+      "invariants": {
+        "finite": true,
+        "max_boundary_error": 0.0,
+        "mean_abs_detF_minus_1": 7.054368287629897e-11,
+        "max_abs_detF_minus_1": 3.687290472953464e-10
+      }
+    }
+  ],
+  "ftle_statistics": {
+    "finite": true,
+    "minimum": 9.746878339314175e-05,
+    "maximum": 1.0044445075872699,
+    "mean": 0.17987969824716019
+  },
+  "invariants": {
+    "finite": true,
+    "max_boundary_error": 0.0,
+    "mean_abs_detF_minus_1": 7.587250756194179e-11,
+    "max_abs_detF_minus_1": 3.687290472953464e-10,
+    "passed": true
+  },
+  "verification": {
+    "performed": true,
+    "reference_mode": "strict",
+    "relative_l2_ftle_error": 1.7098072799065242e-07,
+    "max_abs_ftle_error": 1.1514379917643147e-05,
+    "mean_abs_ftle_error": 5.1064560402141284e-09,
+    "relative_l2_passed": true,
+    "max_abs_passed": true,
+    "passed": true
+  },
+  "output": {
+    "npz_saved": false,
+    "npz_path": null,
+    "npz_save_seconds": 0.0,
+    "materialization_run_timed": false
+  }
+}

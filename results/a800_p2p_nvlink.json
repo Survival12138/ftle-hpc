@@ -1,0 +1,94 @@
+{
+  "devices": [
+    {
+      "id": 0,
+      "name": "NVIDIA A800-SXM4-40GB"
+    },
+    {
+      "id": 1,
+      "name": "NVIDIA A800-SXM4-40GB"
+    }
+  ],
+  "peer_access": {
+    "0->1": true,
+    "1->0": true
+  },
+  "configuration": {
+    "sizes_mib": [
+      4,
+      64,
+      256,
+      1024
+    ],
+    "target_gib": 16.0,
+    "min_repeats": 5,
+    "max_repeats": 1000
+  },
+  "results": [
+    {
+      "direction": "0->1",
+      "bytes_per_transfer": 4194304,
+      "repeats": 1000,
+      "elapsed_seconds": 0.03376332855224609,
+      "bandwidth_GBps": 124.22661449121182,
+      "verified": true
+    },
+    {
+      "direction": "1->0",
+      "bytes_per_transfer": 4194304,
+      "repeats": 1000,
+      "elapsed_seconds": 0.03373567962646484,
+      "bandwidth_GBps": 124.32842754143503,
+      "verified": true
+    },
+    {
+      "direction": "0->1",
+      "bytes_per_transfer": 67108864,
+      "repeats": 256,
+      "elapsed_seconds": 0.09510399627685547,
+      "bandwidth_GBps": 180.64297880804085,
+      "verified": true
+    },
+    {
+      "direction": "1->0",
+      "bytes_per_transfer": 67108864,
+      "repeats": 256,
+      "elapsed_seconds": 0.0951203842163086,
+      "bandwidth_GBps": 180.61185649683776,
+      "verified": true
+    },
+    {
+      "direction": "0->1",
+      "bytes_per_transfer": 268435456,
+      "repeats": 64,
+      "elapsed_seconds": 0.09243545532226563,
+      "bandwidth_GBps": 185.85800355615012,
+      "verified": true
+    },
+    {
+      "direction": "1->0",
+      "bytes_per_transfer": 268435456,
+      "repeats": 64,
+      "elapsed_seconds": 0.09231974029541015,
+      "bandwidth_GBps": 186.09096092587393,
+      "verified": true
+    },
+    {
+      "direction": "0->1",
+      "bytes_per_transfer": 1073741824,
+      "repeats": 16,
+      "elapsed_seconds": 0.09178521728515625,
+      "bandwidth_GBps": 187.17468555558318,
+      "verified": true
+    },
+    {
+      "direction": "1->0",
+      "bytes_per_transfer": 1073741824,
+      "repeats": 16,
+      "elapsed_seconds": 0.09173606109619141,
+      "bandwidth_GBps": 187.27498192870692,
+      "verified": true
+    }
+  ],
+  "all_verified": true
+}

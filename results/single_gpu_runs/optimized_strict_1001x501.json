@@ -1,0 +1,143 @@
+{
+  "configuration": {
+    "mode": "strict",
+    "nx": 1001,
+    "ny": 501,
+    "particles": 501501,
+    "steps": 1000,
+    "dt": 0.01,
+    "tau": 10.0,
+    "state_dtype": "float64",
+    "trig_dtype": "float64",
+    "threads": 64,
+    "chunk_steps": 50,
+    "warmup_runs": 2,
+    "repeats": 7,
+    "relative_l2_error_tolerance": 1e-05,
+    "max_absolute_error_tolerance": 0.0001,
+    "max_abs_detF_minus_1_tolerance": 1e-07
+  },
+  "compiled_resources": {
+    "strict": {
+      "actual_registers_per_thread": 78,
+      "local_memory_bytes_per_thread": 0
+    },
+    "mixed": {
+      "actual_registers_per_thread": 72,
+      "local_memory_bytes_per_thread": 0
+    }
+  },
+  "coefficient_setup": {
+    "coefficient_entries": 3000,
+    "coefficient_bytes": 48000,
+    "host_stage_time_build_seconds": 0.00044642703142017126,
+    "device_coefficient_setup_seconds": 0.0005143129965290427,
+    "total_coefficient_setup_seconds": 0.0009730310412123799
+  },
+  "performance": {
+    "rk4_kernel_launches": 20,
+    "integration_seconds_median": 0.04039894485473633,
+    "ftle_seconds_median": 1.535999961197376e-05,
+    "all_kernel_seconds_median": 0.040414304854348305,
+    "h2d_seconds_median": 0.00356694299262017,
+    "d2h_seconds_median": 0.0003804960288107395,
+    "end_to_end_seconds_median": 0.04442447703331709,
+    "particle_steps_per_second": 12413715303.784836
+  },
+  "run_metrics": [
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.051431678771972654,
+      "ftle_seconds": 1.945599913597107e-05,
+      "all_kernel_seconds": 0.051451134771108624,
+      "h2d_seconds": 0.0035613550571724772,
+      "d2h_seconds": 0.0003804960288107395,
+      "end_to_end_seconds": 0.05547283694613725,
+      "particle_steps_per_second": 9750819183.317997
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.0502724494934082,
+      "ftle_seconds": 1.535999961197376e-05,
+      "all_kernel_seconds": 0.050287809493020176,
+      "h2d_seconds": 0.00393486802931875,
+      "d2h_seconds": 0.002528820070438087,
+      "end_to_end_seconds": 0.05682580708526075,
+      "particle_steps_per_second": 9975662714.938082
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.04096527862548828,
+      "ftle_seconds": 1.4336000196635724e-05,
+      "all_kernel_seconds": 0.04097961462568492,
+      "h2d_seconds": 0.003637064015492797,
+      "d2h_seconds": 0.00036121997982263565,
+      "end_to_end_seconds": 0.045050816028378904,
+      "particle_steps_per_second": 12242099085.540455
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.04039894485473633,
+      "ftle_seconds": 1.535999961197376e-05,
+      "all_kernel_seconds": 0.040414304854348305,
+      "h2d_seconds": 0.0033278060145676136,
+      "d2h_seconds": 0.000398096046410501,
+      "end_to_end_seconds": 0.04422892106231302,
+      "particle_steps_per_second": 12413715303.784836
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.040398433685302736,
+      "ftle_seconds": 1.535999961197376e-05,
+      "all_kernel_seconds": 0.04041379368491471,
+      "h2d_seconds": 0.00356694299262017,
+      "d2h_seconds": 0.0003732329932972789,
+      "end_to_end_seconds": 0.04442447703331709,
+      "particle_steps_per_second": 12413872376.998863
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.04017084884643555,
+      "ftle_seconds": 1.535999961197376e-05,
+      "all_kernel_seconds": 0.040186208846047525,
+      "h2d_seconds": 0.0036493559600785375,
+      "d2h_seconds": 0.0004109470173716545,
+      "end_to_end_seconds": 0.0443169220816344,
+      "particle_steps_per_second": 12484202211.33812
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.04037599945068359,
+      "ftle_seconds": 1.535999961197376e-05,
+      "all_kernel_seconds": 0.040391359450295566,
+      "h2d_seconds": 0.003253774018958211,
+      "d2h_seconds": 0.00036373408511281013,
+      "end_to_end_seconds": 0.044079739949665964,
+      "particle_steps_per_second": 12420769933.201227
+    }
+  ],
+  "ftle_statistics": {
+    "finite": true,
+    "minimum": 0.00010104817920809219,
+    "maximum": 1.0044445070210934,
+    "mean": 0.18141981949976954
+  },
+  "invariants": {
+    "finite": true,
+    "max_boundary_error": 0.0,
+    "mean_abs_detF_minus_1": 7.580949470054549e-11,
+    "max_abs_detF_minus_1": 3.674784920804086e-10,
+    "passed": true
+  },
+  "verification": {
+    "performed": false,
+    "reference_mode": "strict",
+    "passed": null,
+    "reason": "strict mode is the reference"
+  },
+  "output": {
+    "npz_saved": false,
+    "npz_path": null,
+    "npz_save_seconds": 0.0
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "devices": [
+    {
+      "id": 0,
+      "name": "NVIDIA A800-SXM4-40GB"
+    },
+    {
+      "id": 1,
+      "name": "NVIDIA A800-SXM4-40GB"
+    }
+  ],
+  "peer_access": {
+    "0->1": true,
+    "1->0": true
+  },
+  "configuration": {
+    "sizes_mib": [
+      4
+    ],
+    "target_gib": 1.0,
+    "min_repeats": 5,
+    "max_repeats": 1000
+  },
+  "results": [
+    {
+      "direction": "0->1",
+      "bytes_per_transfer": 4194304,
+      "repeats": 256,
+      "elapsed_seconds": 0.008644607543945313,
+      "bandwidth_GBps": 124.20943559803929,
+      "verified": true
+    },
+    {
+      "direction": "1->0",
+      "bytes_per_transfer": 4194304,
+      "repeats": 256,
+      "elapsed_seconds": 0.00872652816772461,
+      "bandwidth_GBps": 123.04341467334905,
+      "verified": true
+    }
+  ],
+  "all_verified": true
+}

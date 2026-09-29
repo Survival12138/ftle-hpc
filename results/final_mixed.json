@@ -1,0 +1,137 @@
+{
+  "configuration": {
+    "mode": "mixed",
+    "nx": 2001,
+    "ny": 1001,
+    "particles": 2003001,
+    "steps": 1000,
+    "dt": 0.01,
+    "tau": 10.0,
+    "state_dtype": "float64",
+    "trig_dtype": "float32",
+    "threads": 64,
+    "chunk_steps": 50,
+    "warmup_runs": 1,
+    "repeats": 5,
+    "relative_l2_error_tolerance": 1e-05,
+    "max_absolute_error_tolerance": 0.0001,
+    "max_abs_detF_minus_1_tolerance": 1e-07
+  },
+  "compiled_resources": {
+    "strict": {
+      "actual_registers_per_thread": 78,
+      "local_memory_bytes_per_thread": 0
+    },
+    "mixed": {
+      "actual_registers_per_thread": 72,
+      "local_memory_bytes_per_thread": 0
+    }
+  },
+  "coefficient_setup": {
+    "coefficient_entries": 3000,
+    "coefficient_bytes": 48000,
+    "host_stage_time_build_seconds": 0.0004589920863509178,
+    "device_coefficient_setup_seconds": 0.0005637530703097582,
+    "total_coefficient_setup_seconds": 0.0010350360535085201
+  },
+  "performance": {
+    "rk4_kernel_launches": 20,
+    "integration_seconds_median": 0.09544127655029297,
+    "ftle_seconds_median": 7.475200295448303e-05,
+    "all_kernel_seconds_median": 0.09551602855324745,
+    "h2d_seconds_median": 0.012103360029868782,
+    "d2h_seconds_median": 0.0012741700047627091,
+    "end_to_end_seconds_median": 0.10886570904403925,
+    "particle_steps_per_second": 20986737315.322
+  },
+  "run_metrics": [
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.1094206085205078,
+      "ftle_seconds": 7.475200295448303e-05,
+      "all_kernel_seconds": 0.10949536052346229,
+      "h2d_seconds": 0.013395968009717762,
+      "d2h_seconds": 0.006554950959980488,
+      "end_to_end_seconds": 0.12952648696955293,
+      "particle_steps_per_second": 18305518741.69658
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.09490707397460937,
+      "ftle_seconds": 7.475200295448303e-05,
+      "all_kernel_seconds": 0.09498182597756386,
+      "h2d_seconds": 0.009638269082643092,
+      "d2h_seconds": 0.007883597048930824,
+      "end_to_end_seconds": 0.11261418904177845,
+      "particle_steps_per_second": 21104865170.913033
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.09452713775634766,
+      "ftle_seconds": 7.475200295448303e-05,
+      "all_kernel_seconds": 0.09460188975930214,
+      "h2d_seconds": 0.012343053007498384,
+      "d2h_seconds": 0.0012280750088393688,
+      "end_to_end_seconds": 0.10824999492615461,
+      "particle_steps_per_second": 21189692690.821953
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.09544127655029297,
+      "ftle_seconds": 7.475200295448303e-05,
+      "all_kernel_seconds": 0.09551602855324745,
+      "h2d_seconds": 0.012103360029868782,
+      "d2h_seconds": 0.0011719230096787214,
+      "end_to_end_seconds": 0.10886570904403925,
+      "particle_steps_per_second": 20986737315.322
+    },
+    {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.09579078674316406,
+      "ftle_seconds": 7.475200295448303e-05,
+      "all_kernel_seconds": 0.09586553874611854,
+      "h2d_seconds": 0.008278335095383227,
+      "d2h_seconds": 0.0012741700047627091,
+      "end_to_end_seconds": 0.10553515492938459,
+      "particle_steps_per_second": 20910163368.5344
+    }
+  ],
+  "ftle_statistics": {
+    "finite": true,
+    "minimum": 9.746878339314175e-05,
+    "maximum": 1.0044445075872699,
+    "mean": 0.17987969824716016
+  },
+  "invariants": {
+    "finite": true,
+    "max_boundary_error": 0.0,
+    "mean_abs_detF_minus_1": 7.587250756194179e-11,
+    "max_abs_detF_minus_1": 3.687290472953464e-10,
+    "passed": true
+  },
+  "verification": {
+    "performed": true,
+    "reference_mode": "strict",
+    "reference_run_metrics": {
+      "rk4_kernel_launches": 20,
+      "integration_seconds": 0.1578233642578125,
+      "ftle_seconds": 7.475200295448303e-05,
+      "all_kernel_seconds": 0.15789811626076697,
+      "h2d_seconds": 0.009398577036336064,
+      "d2h_seconds": 0.0014482130063697696,
+      "end_to_end_seconds": 0.1688405480235815,
+      "particle_steps_per_second": 12691409851.88984
+    },
+    "max_abs_ftle_error": 1.1514379917643147e-05,
+    "mean_abs_ftle_error": 5.1064560402141284e-09,
+    "relative_l2_ftle_error": 1.709807279906524e-07,
+    "relative_l2_passed": true,
+    "max_abs_passed": true,
+    "passed": true
+  },
+  "output": {
+    "npz_saved": true,
+    "npz_path": "/root/ai_infra/ftle_hpc/results/final_mixed.npz",
+    "npz_save_seconds": 1.8526276189368218
+  }
+}

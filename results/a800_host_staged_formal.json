@@ -1,0 +1,213 @@
+{
+  "configuration": {
+    "devices": [
+      0,
+      1
+    ],
+    "mode": "mixed",
+    "decomposition": "contiguous_y_rows",
+    "communication": "host_staged",
+    "halo_width_rows": 1,
+    "nx": 2001,
+    "ny": 1001,
+    "particles": 2003001,
+    "steps": 1000,
+    "dt": 0.01,
+    "tau": 10.0,
+    "threads": 64,
+    "chunk_steps": 50,
+    "warmup_runs": 2,
+    "repeats": 7
+  },
+  "distributed_performance": {
+    "compute_wall_seconds_median": 0.04736420372501016,
+    "particle_steps_per_second": 42289341791.30593
+  },
+  "rank_results": [
+    {
+      "rank": 0,
+      "device_id": 0,
+      "row_range": [
+        0,
+        501
+      ],
+      "particles": 1002501,
+      "resources": {
+        "actual_registers_per_thread": 72,
+        "local_memory_bytes_per_thread": 0
+      },
+      "coefficient_setup": {
+        "coefficient_entries": 3000,
+        "coefficient_bytes": 48000,
+        "host_stage_time_build_seconds": 0.0008276202715933323,
+        "device_coefficient_setup_seconds": 0.0006497618742287159,
+        "total_coefficient_setup_seconds": 0.0014797323383390903
+      },
+      "performance": {
+        "integration_seconds_median": 0.04641929626464844,
+        "halo_exchange_seconds_median": 0.0005076532252132893,
+        "flowmap_ftle_seconds_median": 0.00015273599326610566,
+        "communication_ftle_phase_seconds_median": 0.0007412279956042767,
+        "compute_wall_seconds_median": 0.04736420372501016,
+        "halo_bytes_received": 32016
+      },
+      "run_metrics": [
+        {
+          "integration_seconds": 0.059682464599609374,
+          "halo_exchange_seconds": 0.000519848894327879,
+          "flowmap_ftle_seconds": 0.00016832000017166137,
+          "communication_ftle_phase_seconds": 0.0008106157183647156,
+          "compute_wall_seconds": 0.060631433967500925,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.046569278717041016,
+          "halo_exchange_seconds": 0.000517694279551506,
+          "flowmap_ftle_seconds": 0.0001491519957780838,
+          "communication_ftle_phase_seconds": 0.0007412279956042767,
+          "compute_wall_seconds": 0.055756819900125265,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.04640867233276367,
+          "halo_exchange_seconds": 0.0005059191025793552,
+          "flowmap_ftle_seconds": 0.00015273599326610566,
+          "communication_ftle_phase_seconds": 0.0007333322428166866,
+          "compute_wall_seconds": 0.0473522343672812,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.04640732955932617,
+          "halo_exchange_seconds": 0.0005013891495764256,
+          "flowmap_ftle_seconds": 0.0001526080071926117,
+          "communication_ftle_phase_seconds": 0.0007229740731418133,
+          "compute_wall_seconds": 0.04736420372501016,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.04641097640991211,
+          "halo_exchange_seconds": 0.0005226852372288704,
+          "flowmap_ftle_seconds": 0.00016038399934768677,
+          "communication_ftle_phase_seconds": 0.0007621259428560734,
+          "compute_wall_seconds": 0.04735862510278821,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.04665475082397461,
+          "halo_exchange_seconds": 0.0005076532252132893,
+          "flowmap_ftle_seconds": 0.00015455999970436096,
+          "communication_ftle_phase_seconds": 0.0007441299967467785,
+          "compute_wall_seconds": 0.0475309481844306,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.04641929626464844,
+          "halo_exchange_seconds": 0.0004978026263415813,
+          "flowmap_ftle_seconds": 0.000151296004652977,
+          "communication_ftle_phase_seconds": 0.0007221763953566551,
+          "compute_wall_seconds": 0.047327050007879734,
+          "halo_bytes_received": 32016
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "device_id": 1,
+      "row_range": [
+        501,
+        1001
+      ],
+      "particles": 1000500,
+      "resources": {
+        "actual_registers_per_thread": 72,
+        "local_memory_bytes_per_thread": 0
+      },
+      "coefficient_setup": {
+        "coefficient_entries": 3000,
+        "coefficient_bytes": 48000,
+        "host_stage_time_build_seconds": 0.0007847147062420845,
+        "device_coefficient_setup_seconds": 0.0006081713363528252,
+        "total_coefficient_setup_seconds": 0.0013956427574157715
+      },
+      "performance": {
+        "integration_seconds_median": 0.04646406555175781,
+        "halo_exchange_seconds_median": 0.0005080080591142178,
+        "flowmap_ftle_seconds_median": 0.00014611199498176574,
+        "communication_ftle_phase_seconds_median": 0.000726344995200634,
+        "compute_wall_seconds_median": 0.04736261582002044,
+        "halo_bytes_received": 32016
+      },
+      "run_metrics": [
+        {
+          "integration_seconds": 0.059658145904541014,
+          "halo_exchange_seconds": 0.0005193771794438362,
+          "flowmap_ftle_seconds": 0.00015782399475574492,
+          "communication_ftle_phase_seconds": 0.0007951180450618267,
+          "compute_wall_seconds": 0.0606301249936223,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.05486438369750977,
+          "halo_exchange_seconds": 0.000520423986017704,
+          "flowmap_ftle_seconds": 0.00014585599303245544,
+          "communication_ftle_phase_seconds": 0.0007401988841593266,
+          "compute_wall_seconds": 0.05575613537803292,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.04646995162963867,
+          "halo_exchange_seconds": 0.0005080080591142178,
+          "flowmap_ftle_seconds": 0.00014611199498176574,
+          "communication_ftle_phase_seconds": 0.000726344995200634,
+          "compute_wall_seconds": 0.047350598964840174,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.04646406555175781,
+          "halo_exchange_seconds": 0.0005036457441747189,
+          "flowmap_ftle_seconds": 0.0001459839940071106,
+          "communication_ftle_phase_seconds": 0.0007177679799497128,
+          "compute_wall_seconds": 0.04736261582002044,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.046448673248291016,
+          "halo_exchange_seconds": 0.0005239816382527351,
+          "flowmap_ftle_seconds": 0.0001496960073709488,
+          "communication_ftle_phase_seconds": 0.0007478208281099796,
+          "compute_wall_seconds": 0.0473577999509871,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.046367774963378905,
+          "halo_exchange_seconds": 0.0004919441416859627,
+          "flowmap_ftle_seconds": 0.00014713600277900695,
+          "communication_ftle_phase_seconds": 0.0007160967215895653,
+          "compute_wall_seconds": 0.047530679032206535,
+          "halo_bytes_received": 32016
+        },
+        {
+          "integration_seconds": 0.0462512321472168,
+          "halo_exchange_seconds": 0.000498458743095398,
+          "flowmap_ftle_seconds": 0.00014611199498176574,
+          "communication_ftle_phase_seconds": 0.0007147169671952724,
+          "compute_wall_seconds": 0.04730852786451578,
+          "halo_bytes_received": 32016
+        }
+      ]
+    }
+  ],
+  "correctness": {
+    "distributed_vs_global_flowmap": {
+      "max_absolute_error": 1.1102230246251565e-16,
+      "mean_absolute_error": 1.4073493347258693e-18,
+      "relative_l2_error": 3.335901945388881e-17
+    },
+    "distributed_passed": true,
+    "flowmap_vs_direct_F_discretization": {
+      "max_absolute_error": 0.446344323586947,
+      "mean_absolute_error": 0.0014090277207286638,
+      "relative_l2_error": 0.08086648326007571
+    }
+  }
+}

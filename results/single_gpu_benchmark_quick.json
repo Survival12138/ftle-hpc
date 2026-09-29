@@ -1,0 +1,117 @@
+{
+  "configuration": {
+    "grids": [
+      "241x121",
+      "2001x1001"
+    ],
+    "modes": [
+      "strict",
+      "mixed"
+    ],
+    "dt": 0.01,
+    "tau": 10.0,
+    "threads": 64,
+    "v1_threads": 256,
+    "chunk_steps": 50,
+    "warmup_runs": 1,
+    "repeats": 3,
+    "v1_included": true
+  },
+  "gpu": {
+    "name": "NVIDIA A100-SXM4-40GB",
+    "driver_version": "550.127.05",
+    "memory_mib": "40960"
+  },
+  "results": [
+    {
+      "implementation": "v1_baseline",
+      "mode": "float64",
+      "nx": 241,
+      "ny": 121,
+      "particles": 29161,
+      "steps": 1000,
+      "compute_seconds": 0.05290668869018555,
+      "end_to_end_seconds": 0.054041094961576164,
+      "particle_steps_per_second": 551177945.9637494,
+      "speedup_vs_v1": 1.0,
+      "relative_l2_vs_strict": null,
+      "max_abs_vs_strict": null,
+      "verification_passed": null
+    },
+    {
+      "implementation": "optimized",
+      "mode": "strict",
+      "nx": 241,
+      "ny": 121,
+      "particles": 29161,
+      "steps": 1000,
+      "compute_seconds": 0.004761056114919484,
+      "end_to_end_seconds": 0.005970607977360487,
+      "particle_steps_per_second": 6124901554.640288,
+      "speedup_vs_v1": 11.112385028270197,
+      "relative_l2_vs_strict": 0.0,
+      "max_abs_vs_strict": 0.0,
+      "verification_passed": true
+    },
+    {
+      "implementation": "optimized",
+      "mode": "mixed",
+      "nx": 241,
+      "ny": 121,
+      "particles": 29161,
+      "steps": 1000,
+      "compute_seconds": 0.003162687954492867,
+      "end_to_end_seconds": 0.004171212087385356,
+      "particle_steps_per_second": 9220321580.753586,
+      "speedup_vs_v1": 16.72839352204415,
+      "relative_l2_vs_strict": 9.891174319233148e-08,
+      "max_abs_vs_strict": 2.219162217542703e-06,
+      "verification_passed": true
+    },
+    {
+      "implementation": "v1_baseline",
+      "mode": "float64",
+      "nx": 2001,
+      "ny": 1001,
+      "particles": 2003001,
+      "steps": 1000,
+      "compute_seconds": 0.29641937255859374,
+      "end_to_end_seconds": 0.316499188891612,
+      "particle_steps_per_second": 6757321502.676291,
+      "speedup_vs_v1": 1.0,
+      "relative_l2_vs_strict": null,
+      "max_abs_vs_strict": null,
+      "verification_passed": null
+    },
+    {
+      "implementation": "optimized",
+      "mode": "strict",
+      "nx": 2001,
+      "ny": 1001,
+      "particles": 2003001,
+      "steps": 1000,
+      "compute_seconds": 0.15820066753029824,
+      "end_to_end_seconds": 0.17194103496149182,
+      "particle_steps_per_second": 12661141266.14788,
+      "speedup_vs_v1": 1.8736922996979402,
+      "relative_l2_vs_strict": 0.0,
+      "max_abs_vs_strict": 0.0,
+      "verification_passed": true
+    },
+    {
+      "implementation": "optimized",
+      "mode": "mixed",
+      "nx": 2001,
+      "ny": 1001,
+      "particles": 2003001,
+      "steps": 1000,
+      "compute_seconds": 0.09525008311867714,
+      "end_to_end_seconds": 0.11717582400888205,
+      "particle_steps_per_second": 21028863539.19875,
+      "speedup_vs_v1": 3.112011694407333,
+      "relative_l2_vs_strict": 1.709807279906524e-07,
+      "max_abs_vs_strict": 1.1514379917643147e-05,
+      "verification_passed": true
+    }
+  ]
+}

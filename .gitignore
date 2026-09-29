@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Large numerical data
+*.npz
+*.npy
+
+# NVIDIA profiler output
+*.ncu-rep
+*.nsys-rep
+*.qdstrm
+*.sqlite
+
+# Logs and crash dumps
+*.log
+core
+core.*
+*.core
+
+# Backup archives
+*.tar
+*.tar.gz
+*.zip
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,82 @@
+{
+  "configuration": {
+    "mode": "mixed",
+    "nx": 241,
+    "ny": 121,
+    "particles": 29161,
+    "steps": 10,
+    "dt": 0.01,
+    "tau": 0.1,
+    "state_dtype": "float64",
+    "trig_dtype": "float32",
+    "threads": 64,
+    "chunk_steps": 10,
+    "warmup_runs": 1,
+    "repeats": 1,
+    "relative_l2_error_tolerance": 1e-05,
+    "max_absolute_error_tolerance": 0.0001,
+    "max_abs_detF_minus_1_tolerance": 1e-07
+  },
+  "compiled_resources": {
+    "strict": {
+      "actual_registers_per_thread": 78,
+      "local_memory_bytes_per_thread": 0
+    },
+    "mixed": {
+      "actual_registers_per_thread": 72,
+      "local_memory_bytes_per_thread": 0
+    }
+  },
+  "coefficient_setup": {
+    "coefficient_entries": 30,
+    "coefficient_bytes": 480,
+    "host_stage_time_build_seconds": 4.773726686835289e-05,
+    "device_coefficient_setup_seconds": 0.000864091794937849,
+    "total_coefficient_setup_seconds": 0.0009141340851783752
+  },
+  "performance": {
+    "rk4_kernel_launches": 1,
+    "integration_seconds_median": 0.00031702399253845213,
+    "ftle_seconds_median": 0.00016383999586105347,
+    "all_kernel_seconds_median": 0.00048086398839950557,
+    "h2d_seconds_median": 0.0016880831681191921,
+    "d2h_seconds_median": 0.0001518898643553257,
+    "end_to_end_seconds_median": 0.002472914755344391,
+    "particle_steps_per_second": 919835743.8660746
+  },
+  "run_metrics": [
+    {
+      "rk4_kernel_launches": 1,
+      "integration_seconds": 0.00031702399253845213,
+      "ftle_seconds": 0.00016383999586105347,
+      "all_kernel_seconds": 0.00048086398839950557,
+      "h2d_seconds": 0.0016880831681191921,
+      "d2h_seconds": 0.0001518898643553257,
+      "end_to_end_seconds": 0.002472914755344391,
+      "particle_steps_per_second": 919835743.8660746
+    }
+  ],
+  "ftle_statistics": {
+    "finite": true,
+    "minimum": 0.0024487532243824316,
+    "maximum": 1.002458478708318,
+    "mean": 0.40275828914707534
+  },
+  "invariants": {
+    "finite": true,
+    "max_boundary_error": 0.0,
+    "mean_abs_detF_minus_1": 5.606072902743642e-12,
+    "max_abs_detF_minus_1": 2.660927034270344e-11,
+    "passed": true
+  },
+  "verification": {
+    "performed": false,
+    "reference_mode": "strict",
+    "passed": null
+  },
+  "output": {
+    "npz_saved": false,
+    "npz_path": null,
+    "npz_save_seconds": 0.0
+  }
+}

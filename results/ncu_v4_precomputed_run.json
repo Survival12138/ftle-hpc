@@ -1,0 +1,69 @@
+{
+  "configuration": {
+    "nx": 2001,
+    "ny": 1001,
+    "particles": 2003001,
+    "steps": 1000,
+    "dt": 0.01,
+    "tau": 10.0,
+    "dtype": "float64",
+    "threads": 64,
+    "chunk_steps": 50,
+    "warmup_runs": 1,
+    "repeats": 1,
+    "measurement_order": "alternating_pairs",
+    "error_reference": "strict_gpu",
+    "relative_l2_error_tolerance": 1e-08
+  },
+  "coefficient_setup": {
+    "coefficient_entries": 3000,
+    "coefficient_bytes": 48000,
+    "host_stage_time_build_seconds": 0.0004464349476620555,
+    "device_coefficient_setup_seconds": 0.0007967670680955052,
+    "total_coefficient_setup_seconds": 0.001251581939868629
+  },
+  "results": [
+    {
+      "mode": "strict",
+      "rk4_kernel_launches": 20,
+      "gpu_integration_seconds_median": 0.23024946594238282,
+      "gpu_ftle_seconds_median": 7.475200295448303e-05,
+      "gpu_all_kernel_seconds_median": 0.2303242179453373,
+      "gpu_end_to_end_seconds_median": 0.2442434880649671,
+      "gpu_h2d_seconds_median": 0.01262366003356874,
+      "gpu_d2h_seconds_median": 0.0010884288931265473,
+      "gpu_particle_steps_per_second": 8699264477.34401,
+      "gpu_finite": true,
+      "gpu_max_boundary_error": 0.0,
+      "gpu_mean_abs_detF_minus_1": 7.587194432485367e-11,
+      "gpu_max_abs_detF_minus_1": 3.6834535421803594e-10,
+      "max_abs_ftle_error": 0.0,
+      "mean_abs_ftle_error": 0.0,
+      "relative_l2_ftle_error": 0.0
+    },
+    {
+      "mode": "precomputed",
+      "rk4_kernel_launches": 20,
+      "gpu_integration_seconds_median": 0.20695840454101563,
+      "gpu_ftle_seconds_median": 7.372800260782241e-05,
+      "gpu_all_kernel_seconds_median": 0.20703213254362346,
+      "gpu_end_to_end_seconds_median": 0.22853472805581987,
+      "gpu_h2d_seconds_median": 0.012015189975500107,
+      "gpu_d2h_seconds_median": 0.009284058003686368,
+      "gpu_particle_steps_per_second": 9678278127.637186,
+      "gpu_finite": true,
+      "gpu_max_boundary_error": 0.0,
+      "gpu_mean_abs_detF_minus_1": 7.587195253900339e-11,
+      "gpu_max_abs_detF_minus_1": 3.6837377592746634e-10,
+      "max_abs_ftle_error": 5.03597163969971e-13,
+      "mean_abs_ftle_error": 1.3200930261555622e-16,
+      "relative_l2_ftle_error": 6.488644439891772e-15,
+      "integration_speedup_vs_strict": 1.1125398190666438,
+      "all_kernel_speedup_vs_strict": 1.1125046876325153,
+      "end_to_end_speedup_vs_strict": 1.0687368617574409
+    }
+  ],
+  "precomputed_passed": true,
+  "precomputed_integration_speedup": 1.1125398190666438,
+  "recommended_mode": "precomputed"
+}

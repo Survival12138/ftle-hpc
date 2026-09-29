@@ -1,0 +1,34 @@
+Generating SQLite file results/nsys_chunk1_vs50.sqlite from results/nsys_chunk1_vs50.nsys-rep
+Processing [results/nsys_chunk1_vs50.sqlite] with [/usr/local/cuda-12.4/nsight-systems-2023.4.4/host-linux-x64/reports/cuda_gpu_kern_sum.py]... 
+
+ ** CUDA GPU Kernel Summary (cuda_gpu_kern_sum):
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)   Max (ns)   StdDev (ns)                                                  Name                                                
+ --------  ---------------  ---------  ---------  ---------  --------  ----------  -----------  ----------------------------------------------------------------------------------------------------
+    100.0    1,074,595,438      2,041  526,504.4  294,752.0     8,768  11,765,595  1,575,547.6  __main__::rk4_chunk_kernel[abi:v1,cw51cXTLSUwv1sDUaKthoaNgoKmjgOR3W3Cw6igA9duC0hkwnNGiHEkYkrqQBFBTD…
+      0.0          288,225          5   57,645.0   70,944.0     4,512      71,168     29,702.8  double_gyre_ftle_cuda_v1::ftle_kernel[abi:v3,cw51cXTLSUwv1sDUaKthoaNgoKmjgOR3W3Cw6igA9duC0hkwnNGiHE…
+
+Processing [results/nsys_chunk1_vs50.sqlite] with [/usr/local/cuda-12.4/nsight-systems-2023.4.4/host-linux-x64/reports/cuda_api_sum.py]... 
+
+ ** CUDA API Summary (cuda_api_sum):
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)       Med (ns)      Min (ns)     Max (ns)    StdDev (ns)               Name            
+ --------  ---------------  ---------  -------------  -------------  -----------  -----------  ------------  ----------------------------
+     77.4      885,929,659          4  221,482,414.8  229,650,582.5  194,762,959  231,865,535  17,879,097.4  cuEventSynchronize          
+     10.9      124,566,709         16    7,785,419.3    9,346,882.0    1,004,320   11,260,119   3,429,945.6  cuMemcpyDtoH_v2             
+      5.7       65,536,430          1   65,536,430.0   65,536,430.0   65,536,430   65,536,430           0.0  cuDevicePrimaryCtxRelease_v2
+      3.5       40,109,949         30    1,336,998.3    1,493,629.0       13,130    4,808,445     902,928.6  cuMemcpyHtoD_v2             
+      1.8       21,100,793      2,046       10,313.2        9,778.0        8,661      334,400       7,585.0  cuLaunchKernelEx            
+      0.4        4,476,277         35      127,893.6      131,302.0        6,984      553,423      92,883.5  cuMemAlloc_v2               
+      0.2        1,965,059         33       59,547.2       60,063.0        6,425      145,550      33,803.2  cuMemFree_v2                
+      0.0          188,014         11       17,092.2       14,248.0       13,410       42,184       8,373.2  cuCtxSynchronize            
+      0.0           73,192          8        9,149.0        8,660.0        6,984       15,924       2,844.2  cuEventRecord               
+      0.0           72,914          2       36,457.0       36,457.0       30,730       42,184       8,099.2  cuLibraryLoadData           
+      0.0           43,024          8        5,378.0        4,889.0        4,191        8,661       1,461.3  cuEventCreate               
+      0.0           41,067          1       41,067.0       41,067.0       41,067       41,067           0.0  cuMemGetInfo_v2             
+      0.0           39,111         10        3,911.1        3,632.0        3,353        5,867         709.3  cuKernelGetAttribute        
+      0.0           26,260          3        8,753.3       10,057.0        5,587       10,616       2,756.3  cuInit                      
+      0.0           12,013          2        6,006.5        6,006.5        4,749        7,264       1,778.4  cuLibraryGetKernel          
+      0.0            6,984          1        6,984.0        6,984.0        6,984        6,984           0.0  cuCtxSetCurrent             
+      0.0            3,911          1        3,911.0        3,911.0        3,911        3,911           0.0  cuDeviceGetUuid_v2          
+
